@@ -1,6 +1,9 @@
 import React from 'react';
 import clock from './assets/logos/clock.svg';
 import './App.css';
+import { DatePicker } from 'antd';
+import 'antd/dist/antd.css';
+import { Button } from 'antd';
 
 function App() {
   return (
@@ -10,6 +13,10 @@ function App() {
         <p>
          Welcome InTime Project
         </p>
+
+        <DatePicker />
+
+        <Button className='mt-5' type="primary">Primary Button</Button>
       </header>
     </div>
   );
