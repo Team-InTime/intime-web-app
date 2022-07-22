@@ -4,21 +4,11 @@ import './App.css';
 import { DatePicker } from 'antd';
 import 'antd/dist/antd.css';
 import { Button } from 'antd';
+import { AppRoutes } from './routes';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={clock} className="App-logo" alt="logo" />
-        <p>
-         Welcome InTime Project
-        </p>
-
-        <DatePicker />
-
-        <Button className='mt-5' type="primary">Primary Button</Button>
-      </header>
-    </div>
+    <AppRoutes/>
   );
 }
 
