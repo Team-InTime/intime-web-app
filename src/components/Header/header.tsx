@@ -6,6 +6,7 @@ import {
   DashboardOutlined,
   VideoCameraOutlined,
 } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 import { Layout, Menu } from 'antd';
 import React, { useState } from 'react';
 import logo from '../../assets/logos/logo.svg';
@@ -39,12 +40,12 @@ export const HeaderApp: React.FC<Children> = (props ) => {
           items = {[
             {
               key: '1',
-              icon: <DashboardOutlined />,
+              icon: <Link to="/dashboard"><DashboardOutlined /></Link>,
               label: 'Dashboard',
             },
             {
               key: '2',
-              icon: <UserOutlined />,
+              icon: <Link to="/t"><UserOutlined /></Link>,
               label: 'Salas ativas',
             },
           ]}
