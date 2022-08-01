@@ -1,10 +1,8 @@
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
-  UploadOutlined,
   UserOutlined,
   DashboardOutlined,
-  VideoCameraOutlined,
 } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import { Layout, Menu } from 'antd';
@@ -12,18 +10,13 @@ import React, { useState } from 'react';
 import logo from '../../assets/logos/logo.svg';
 import clock from '../../assets/logos/clock.svg';
 
-
-
 const { Header, Sider, Content } = Layout;
 
 type Children = {
   children?: JSX.Element | JSX.Element[],
-  path?: string;
 }
 
-
-
-export const HeaderApp: React.FC<Children> = (props ) => {
+export const HeaderApp: React.FC<Children> = (props) => {
   const [collapsed, setCollapsed] = useState(false);
 
   return (
@@ -45,7 +38,7 @@ export const HeaderApp: React.FC<Children> = (props ) => {
             },
             {
               key: '2',
-              icon: <Link to="/t"><UserOutlined /></Link>,
+              icon: <Link to="/active-room"><UserOutlined /></Link>,
               label: 'Salas ativas',
             },
           ]}
@@ -61,8 +54,8 @@ export const HeaderApp: React.FC<Children> = (props ) => {
         <Content
           className="site-layout-background"
           style={{
-            margin: '24px 16px',
-            padding: 24,
+            margin: '0px',
+            padding: 0,
             height: "auto"
           }}
         >
