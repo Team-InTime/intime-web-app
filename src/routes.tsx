@@ -7,9 +7,16 @@ import { Login } from './pages/Login/login';
 export function AppRoutes() {
   return (
     <Router>
-      <Routes>
+      <HeaderApp>
+        <Routes>
+          <Route path="/" element={<Dashboard/>} />
+          <Route path="/index" element={<ActiveRoom/>} />
+          <Route path="/dashboard" element={<Dashboard/>} />
+        </Routes>
+      </HeaderApp>
+      {/* <Routes>
         <Route path="/login" element={<Login/>} />
-      </Routes>
+      </Routes> */}
     </Router>
   );
 }
