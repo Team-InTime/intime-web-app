@@ -54,9 +54,35 @@
     transition: 0.2s;
 }
 
-.linkPwd
+.pwdModalBtn
 {
+    background-color: transparent;
     color: #383838;
+    border: none;
+    transition: 0.3s;
+}
+
+.pwdModalBtn:hover{
+    transition: 0.3s;
+    color: rgb(88, 88, 216);
+    text-decoration: underline;
+}
+
+.modalText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.modalText img{
+    width: 15%;
+}
+.modalText h5{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: 600;
 }
 
 .form-control{
