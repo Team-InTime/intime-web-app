@@ -4,8 +4,13 @@ import logo_purple from '../../assets/logos/logo_purple.svg';
 import ball1 from '../../assets/geometry/Ball1.svg'
 import ball2 from '../../assets/geometry/Ball2.svg'
 import ball3 from '../../assets/geometry/Ball3.svg'
+import locker from '../../assets/others/pwd_change.svg'
 
 import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import Modal, { ModalProps } from 'react-bootstrap/Modal';
+import React from 'react';
+import { Omit, BsPrefixProps } from 'react-bootstrap/esm/helpers';
 
 export function Login(){
     return <section className='row'>
@@ -79,9 +84,66 @@ export function Login(){
                     textAlign: 'center',
                     marginTop: '24px'
                 }}> 
-                    <a  href="/" className='linkPwd'>Esqueci minha senha?</a>
+                    {/* Component that was used for render the modal */}
+                    <ChangeModal></ChangeModal>
                 </div>
             </div>
+            
         </div>
     </section>
 }
+
+
+function MyVerticallyCenteredModal(props: JSX.IntrinsicAttributes & Omit<Pick<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "key" | keyof React.HTMLAttributes<HTMLDivElement>> & { ref?: ((instance: HTMLDivElement | null) => void) | React.RefObject<HTMLDivElement> | null | undefined; }, BsPrefixProps<"div"> & ModalProps> & BsPrefixProps<"div"> & ModalProps & { children?: React.ReactNode; } ) {
+    return (
+      <Modal 
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter" style={{fontFamily: "poppins", fontWeight: "600"}}>
+            Recuperação de senha
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body >
+        <div className='modalText'>
+            <img src={locker} alt='Cadeado'/>
+            <h5>Informe seu email para modificar sua senha</h5>
+            <Form style={{width: "90%"}}>
+                    <Form.Group className="" controlId="formBasicEmail">
+                        <Form.Label style={{fontSize: '18px', marginBottom: '-7px'}}>E-mail</Form.Label>
+                        <Form.Control type="email" size='lg' style={{
+                            backgroundColor: '#94A3B84D',
+                            width: "100%"
+                        }}/>
+                    </Form.Group>
+                    <button type="submit" className='w-100 btn-entrar' style={{
+                            height: "52px"
+                        }}>
+                        Verificar
+                    </button>
+            </Form>
+        </div>
+        </Modal.Body>
+      </Modal>
+    );
+  }
+  
+  function ChangeModal() {
+    const [modalShow, setModalShow] = React.useState(false);
+  
+    return (
+      <>
+        <button type="button" className='pwdModalBtn' onClick={() => setModalShow(true)}>
+            Esqueci minha senha?
+        </button>
+  
+        <MyVerticallyCenteredModal
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+        />
+      </>
+    );
+  }
