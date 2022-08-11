@@ -68,8 +68,8 @@ export default styled(DynamicLineChart)`
   border: 1px solid rgba(0, 0, 0, 0.18);
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 13px;
-  margin: 2%;
-  height: 60%;
+
+  max-height: 600px;
   padding-bottom: 1%;
   .chart-container {
     width: 100%;

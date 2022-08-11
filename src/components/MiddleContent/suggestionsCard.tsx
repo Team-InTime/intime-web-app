@@ -5,28 +5,14 @@ import styled from 'styled-components';
 
 type DynamicSuggestionsCardProps = {
   className?: string;
-  image: string;
-  name: string;
-  desc: string;
-  status: string;
-  date: string
+  children: any;
 };
 // PASSANDO AS PROPS CORRETAS ELE MONTA OS VALORES DE FORMA DINAMICA
-const DynamicSuggestionsCard = ({ className, image, name, desc, status, date }: DynamicSuggestionsCardProps) => {
+const DynamicSuggestionsCard = ({ className, children }: DynamicSuggestionsCardProps) => {
   return (
     <div className={`${className} col-md-6`}>
-      <div className="title-div">Justificativa de faltas pendentes</div>
-      <div className="div-flex-row">
-        <img src={image} alt="" />
-        <div className="div-flex-column">
-          <p className="name">{name}</p>
-          <p className="desc">{desc}</p>
-          <div className="div-status-date">
-            <div className="div-status">{status}</div>
-            <div className="div-date">{date}</div>
-          </div>
-        </div>
-      </div>
+<div className="title-div">Justificativa de faltas pendentes</div>
+      {children}
     </div>
   );
 };
@@ -34,11 +20,10 @@ const DynamicSuggestionsCard = ({ className, image, name, desc, status, date }: 
 export default styled(DynamicSuggestionsCard)`
   display: flex;
   flex-direction: column;
-  max-height: 60%;
+  max-height: 600px;
   border: 1px solid rgba(0, 0, 0, 0.18);
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 13px;
-  margin: 2%;
   overflow: auto;
   .title-div {
     min-width: 100%;

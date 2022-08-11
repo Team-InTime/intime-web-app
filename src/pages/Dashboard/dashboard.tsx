@@ -3,6 +3,10 @@ import {
   FilterOutlined
 } from '@ant-design/icons';
 import { ChartsEstimate } from '../../components/Charts-estimate/charts-estimate';
+import DynamicLineChart from '../../components/MiddleContent/lineChart'
+import DynamicSuggestionsCard from '../../components/MiddleContent/suggestionsCard'
+import SuggestionCardContent from '../../components/MiddleContent/suggestionCardContent';
+import image from '../../assets/others/user_face_template.svg'
 
 export function Dashboard() {
   return (
@@ -29,6 +33,14 @@ export function Dashboard() {
       </div>
 
       <ChartsEstimate/>
+     <div className='row m-4'> 
+      <DynamicLineChart />
+      <DynamicSuggestionsCard>
+          <SuggestionCardContent image={image} name={"Estevao Boaventura"} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum dictum tristique. Nunc accumsan tempus ex vel bibendum. Nam semper sollicitudin volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus nisl nec molestie mattis. Praesent nisi velit, iaculis et odio fermentum, viverra tempus nulla."} status={"Pendente"} date={"24 de maio, 2022"}/>
+          <SuggestionCardContent image={image} name={"Estevao Boaventura"} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum dictum tristique. Nunc accumsan tempus ex vel bibendum. Nam semper sollicitudin volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus nisl nec molestie mattis. Praesent nisi velit, iaculis et odio fermentum, viverra tempus nulla."} status={"Pendente"} date={"24 de maio, 2022"}/>
+          <SuggestionCardContent image={image} name={"Estevao Boaventura"} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum dictum tristique. Nunc accumsan tempus ex vel bibendum. Nam semper sollicitudin volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus nisl nec molestie mattis. Praesent nisi velit, iaculis et odio fermentum, viverra tempus nulla."} status={"Pendente"} date={"24 de maio, 2022"}/>
+      </DynamicSuggestionsCard>
+      </div>
     </div>
   );
 }
