@@ -2,6 +2,7 @@ import { Button } from 'antd';
 import {
   FilterOutlined
 } from '@ant-design/icons';
+import { ChartsEstimate } from '../../components/charts-estimate/charts-estimate';
 
 export function Dashboard() {
   return (
@@ -26,6 +27,8 @@ export function Dashboard() {
           </div>
         </div>
       </div>
+
+      <ChartsEstimate/>
     </div>
   );
 }

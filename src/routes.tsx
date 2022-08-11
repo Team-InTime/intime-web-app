@@ -10,7 +10,7 @@ export function AppRoutes() {
       <HeaderApp>
         <Routes>
           <Route path="/" element={<Dashboard/>} />
-          <Route path="/index" element={<ActiveRoom/>} />
+          <Route path="/active-room" element={<ActiveRoom/>} />
           <Route path="/dashboard" element={<Dashboard/>} />
         </Routes>
       </HeaderApp>

@@ -10,6 +10,7 @@ import React, { useState } from 'react';
 import logo from '../../assets/logos/logo.svg';
 import clock from '../../assets/logos/clock.svg';
 
+
 const { Header, Sider, Content } = Layout;
 
 type Children = {
@@ -56,10 +57,11 @@ export const HeaderApp: React.FC<Children> = (props) => {
           style={{
             margin: '0px',
             padding: 0,
-            height: "auto"
+            height: "auto",
           }}
         >
          {props.children}
+
         </Content>
       </Layout>
     </Layout>
