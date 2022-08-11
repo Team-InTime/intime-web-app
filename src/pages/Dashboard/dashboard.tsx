@@ -2,7 +2,7 @@ import { Button } from 'antd';
 import {
   FilterOutlined
 } from '@ant-design/icons';
-import { ChartsEstimate } from '../../components/charts-estimate/charts-estimate';
+import { ChartsEstimate } from '../../components/Charts-estimate/charts-estimate';
 
 export function Dashboard() {
   return (
