@@ -23,7 +23,7 @@ export const HeaderApp: React.FC<Children> = (props) => {
     <Layout style={{height: "100vh"}}>
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="logo">
-          <img src={ collapsed ? clock: logo} alt="intime" style={{width:'90%',height:'50px', margin: '5px 0px'}} />
+          <img src={ collapsed ? clock: logo} alt="intime" style={{width:'90%',height:'50px', margin: '8px 0px', padding: '1%'}} />
         </div>
 
         <Menu

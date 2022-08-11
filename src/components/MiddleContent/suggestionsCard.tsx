@@ -1,0 +1,111 @@
+import React from 'react';
+import styled from 'styled-components';
+
+
+
+type DynamicSuggestionsCardProps = {
+  className?: string;
+  image: string;
+  name: string;
+  desc: string;
+  status: string;
+  date: string
+};
+// PASSANDO AS PROPS CORRETAS ELE MONTA OS VALORES DE FORMA DINAMICA
+const DynamicSuggestionsCard = ({ className, image, name, desc, status, date }: DynamicSuggestionsCardProps) => {
+  return (
+    <div className={`${className} col-md-6`}>
+      <div className="title-div">Justificativa de faltas pendentes</div>
+      <div className="div-flex-row">
+        <img src={image} alt="" />
+        <div className="div-flex-column">
+          <p className="name">{name}</p>
+          <p className="desc">{desc}</p>
+          <div className="div-status-date">
+            <div className="div-status">{status}</div>
+            <div className="div-date">{date}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default styled(DynamicSuggestionsCard)`
+  display: flex;
+  flex-direction: column;
+  max-height: 60%;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 13px;
+  margin: 2%;
+  overflow: auto;
+  .title-div {
+    min-width: 100%;
+    margin-left: 4%;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    height: auto;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .div-flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    > img {
+      min-width: 80px;
+      max-width: 100px;
+      min-height: 80px;
+      max-height: 100px;
+      margin-left: 0;
+      object-fit: cover;
+      border-radius: 20%;
+      margin: 2% 2% 2% 2%;
+    }
+  }
+
+  .div-flex-column {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    > .name {
+      font-size: 18px;
+      letter-spacing: 1px;
+      margin-bottom: 0;
+      margin-top: 3%;
+    }
+
+    > .desc {
+      width: 100%;
+      padding-right: 3%;
+      color: rgba(0, 0, 0, 0.53);
+    }
+  }
+
+  .div-status-date {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* border: solid 2px #000; */
+    > .div-status {
+      text-align: center;
+      width: auto;
+      min-width: 15%;
+      height: 100%;
+      color: #ffffff;
+      background: #ebaa02;
+      padding: 0 3% 0 3%;
+      border-radius: 24px;
+    }
+
+    > .div-date {
+      margin-right: 6%;
+    }
+  }
+`;
