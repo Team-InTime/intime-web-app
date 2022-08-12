@@ -10,7 +10,7 @@ type DynamicSuggestionsCardProps = {
 // PASSANDO AS PROPS CORRETAS ELE MONTA OS VALORES DE FORMA DINAMICA
 const DynamicSuggestionsCard = ({ className, children }: DynamicSuggestionsCardProps) => {
   return (
-    <div className={`${className} col-md-6`}>
+    <div className={`${className} col-md-5 col-sm-12`}>
 <div className="title-div">Justificativa de faltas pendentes</div>
       {children}
     </div>
@@ -20,7 +20,7 @@ const DynamicSuggestionsCard = ({ className, children }: DynamicSuggestionsCardP
 export default styled(DynamicSuggestionsCard)`
   display: flex;
   flex-direction: column;
-  max-height: 600px;
+  max-height: 400px;
   border: 1px solid rgba(0, 0, 0, 0.18);
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 13px;
@@ -42,10 +42,8 @@ export default styled(DynamicSuggestionsCard)`
     margin-left: 2%;
     margin-bottom: 2%;
     > img {
-      min-width: 80px;
-      max-width: 100px;
-      min-height: 80px;
-      max-height: 100px;
+      width: 50px;
+      height: 50px;
       margin-left: 0;
       object-fit: cover;
       border-radius: 20%;

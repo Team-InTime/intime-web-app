@@ -35,12 +35,12 @@ type DynamicLineChartProps = {
 
 const DynamicLineChart = ({ className }: DynamicLineChartProps) => {
   return (
-    <div className={`${className} col-md-6`}>
+    <div className={`${className} col-md-6 col-sm-12`}>
       <ResponsiveContainer className="chart-container" width="100%" height="100%">
         <BarChart
           className="bar-chart"
-          width={500}
-          height={300}
+          width={400}
+          height={200}
           data={data}
           margin={{
             top: 30,
@@ -68,8 +68,7 @@ export default styled(DynamicLineChart)`
   border: 1px solid rgba(0, 0, 0, 0.18);
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 13px;
-
-  max-height: 600px;
+  max-height: 400px;
   padding-bottom: 1%;
   .chart-container {
     width: 100%;
