@@ -48,13 +48,15 @@ const DynamicLineChart = ({ className }: DynamicLineChartProps) => {
             left: 5,
             bottom: 5,
           }}
+          
         >
+        
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="Faltas" fill="#8884d8" radius={[5, 5, 0, 0]} barSize={24} />
+          <Bar dataKey="Faltas" fill="#8884d8" radius={[5,5,0,0]} barSize={24}/>
         </BarChart>
       </ResponsiveContainer>
     </div>
@@ -62,12 +64,12 @@ const DynamicLineChart = ({ className }: DynamicLineChartProps) => {
 };
 
 export default styled(DynamicLineChart)`
+
   border: 1px solid rgba(0, 0, 0, 0.18);
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 13px;
   max-height: 400px;
   padding-bottom: 1%;
-  background: #fafafa;
   .chart-container {
     width: 100%;
     height: 100%;

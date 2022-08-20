@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
+
 type DynamicSuggestionsCardProps = {
   className?: string;
   children: any;
@@ -9,7 +11,7 @@ type DynamicSuggestionsCardProps = {
 const DynamicSuggestionsCard = ({ className, children }: DynamicSuggestionsCardProps) => {
   return (
     <div className={`${className} col-md-5 col-sm-12`}>
-      <div className="title-div">Justificativa de faltas pendentes</div>
+<div className="title-div">Justificativa de faltas pendentes</div>
       {children}
     </div>
   );
@@ -22,11 +24,7 @@ export default styled(DynamicSuggestionsCard)`
   border: 1px solid rgba(0, 0, 0, 0.18);
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 13px;
-  background: #fafafa;
-  overflow-y: auto;
-  ::-webkit-scrollbar {
-    display: none;
-  }
+  overflow: auto;
   .title-div {
     min-width: 100%;
     margin-left: 4%;
