@@ -3,6 +3,7 @@ import { Button } from 'antd';
 import {
   DashboardOutlined
 } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 
 export function ActiveRoom() {
   return (
@@ -27,8 +28,10 @@ export function ActiveRoom() {
           </div>
           <div className="m-b-5">
             <Button type="default" className="d-flex justify-content-center align-items-center">
+            <Link to={'/dashboard'}style={{textDecoration:"none", display:"flex", justifyContent:"center", alignItems:"center"}}>
               <DashboardOutlined />
-              <span>Dashboard</span>
+             <span style={{marginLeft: '5px'}}>Dashboard</span>
+             </Link>
             </Button>
           </div>
         </div>

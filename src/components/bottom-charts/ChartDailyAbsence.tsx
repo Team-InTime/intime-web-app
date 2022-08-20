@@ -17,6 +17,7 @@ export const options = {
 
 export function DailyAbsence() {
   return (
+    <div className="col-md-3">
     <Chart
       chartType="PieChart"
       width="100%"
@@ -24,5 +25,6 @@ export function DailyAbsence() {
       data={data}
       options={options}
     />
+    </div>
   );
 }
