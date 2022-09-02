@@ -5,6 +5,9 @@ import {
 } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
+import  DataTable  from '../../components/DataTable/dataTable'
+import  DataSelect  from '../../components/DataTable/DataTableSelect/dataTableSelect'
+
 export function ActiveRoom() {
   return (
     <div>
@@ -34,6 +37,17 @@ export function ActiveRoom() {
              </Link>
             </Button>
           </div>
+        </div>
+      </div> 
+      <div className=" m-b-5 p-4 align-items-center justify-content-between">
+        <div>
+          <div style={{display: 'flex', justifyContent: 'space-between'}}>
+            <DataSelect />
+            <DataSelect />
+            <DataSelect />
+            <DataSelect />
+          </div>
+          <DataTable />
         </div>
       </div>
     </div>
